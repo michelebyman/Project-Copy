@@ -22,15 +22,30 @@ padding: 0;
 /* MAIN TREE ICON */
 .tree-icon {
   width: 130px;
+}
 
+#nav-toggle {
+  text-decoration: none;
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  padding-top: 10px;
+  top:0;
+  left:0;
+  width: 70%;
+  height: 110vh;
+  background-color: #f7f7f7;
+  z-index: 3;
 }
 
 a > span{
   font-size: 27px;
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
-.btn-primary {
+.btn-menu {
   height: 30px;
   width: 85px;
   margin-left:80px;
@@ -38,29 +53,101 @@ a > span{
   padding: 10px 16px 10px 16px;
 }
 
-.menu {
-  display: none;
+.links-menu li {
+  padding: 10px;
   text-align: center;
+}
+
+.alink {
+  color: black;
+}
+
+.info-links {
+  font-size: 14px;
+  margin-left: 15px;
+  display: none;
+}
+
+.info-links ul li {
+  list-style: none;
+  margin: 10px;
+}
+
+.info-links ul li a {
+  position: relative;
+  color: grey;
+  text-decoration: none;
+}
+
+.info-links ul li a:hover {
+  color: green;
+}
+
+
+/* .info-links ul li a {
+  overflow: hidden;
+} */
+
+.info-links ul li a:after {
+  content: "";
   position: absolute;
-  padding-top: 10px;
-  top:-10px;
-  left:-2px;
-  width: 70%;
-  background-color: #f7f7f7;
-  z-index: 3
+  /* z-index: -1; */
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: green;
+  height: 4px;
+  /* transition-property: left right; */
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.info-links ul li a:hover:after,
+.info-links ul li a:active:after
+{
+  right: 0;
+}
+
+.info-links ul li a:before {
+  content: "";
+  position: absolute;
+  /* z-index: -1; */
+  right: 0;
+  left: 100%;
+  /* bottom: -5px; */
+  background: green;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.info-links ul li a:hover:before,
+.info-links ul li a:active:before
+{
+left: 0;
+}
+
+
+.login {
+  margin-top: 30px;
+}
+
+.btn-toggle {
+  width: 100px;
+  height: 40px;
 }
 
 #shadow {
   display: none;
-  height:100vh;
+  height:110vh;
   width:100vw;
-  position: absolute;
-  left: -1px;
-  top: -10px;
+  position: fixed;
+  left: 0;
   right: 0;
   bottom: 0;
   z-index: 2;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.6);
 }
 
 /* BACKGROUND IMG */
@@ -71,7 +158,6 @@ a > span{
   background-position: center;
   position: relative;
 }
-
 
 
 /*Här är css för att göra sidan responsiv alltid under all annan css*/
