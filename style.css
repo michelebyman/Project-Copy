@@ -159,6 +159,12 @@ left: 0;
   position: relative;
 }
 
+.kalle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
 
 /*Här är css för att göra sidan responsiv alltid under all annan css*/
 
